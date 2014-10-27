@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kuttypayan.Web", "Kuttypayan.Web\Kuttypayan.Web.csproj", "{A9DC83FC-46A7-4F80-8451-83E8D6FCA3A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KuttyPayan.MongodbLibrary", "KuttyPayan.MongodbLibrary\KuttyPayan.MongodbLibrary.csproj", "{3FE7C6D2-5A73-442B-8596-10A9463852CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KuttyPayan.ConsoleTest", "KuttyPayan.ConsoleTest\KuttyPayan.ConsoleTest.csproj", "{A157FEEB-554D-41CE-9529-2B166348E463}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KuttyPayan.DBReaderLibrary", "KuttyPayan.DBReaderLibrary\KuttyPayan.DBReaderLibrary.csproj", "{2B4BCFFA-22F0-4740-8796-6E002BA34D2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KuttyPayan.NLP", "KuttyPayan.NLP\KuttyPayan.NLP.csproj", "{EFD31832-6714-467F-ABA5-6B268CAC9486}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KuttyPayan.SchemaEvaluatorLibrary", "KuttyPayan.SchemaEvaluatorLibrary\KuttyPayan.SchemaEvaluatorLibrary.csproj", "{D00DCB1C-6056-497E-98F8-BD158F9B7DF5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A9DC83FC-46A7-4F80-8451-83E8D6FCA3A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9DC83FC-46A7-4F80-8451-83E8D6FCA3A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9DC83FC-46A7-4F80-8451-83E8D6FCA3A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9DC83FC-46A7-4F80-8451-83E8D6FCA3A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FE7C6D2-5A73-442B-8596-10A9463852CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FE7C6D2-5A73-442B-8596-10A9463852CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FE7C6D2-5A73-442B-8596-10A9463852CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FE7C6D2-5A73-442B-8596-10A9463852CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A157FEEB-554D-41CE-9529-2B166348E463}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A157FEEB-554D-41CE-9529-2B166348E463}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A157FEEB-554D-41CE-9529-2B166348E463}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A157FEEB-554D-41CE-9529-2B166348E463}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B4BCFFA-22F0-4740-8796-6E002BA34D2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B4BCFFA-22F0-4740-8796-6E002BA34D2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B4BCFFA-22F0-4740-8796-6E002BA34D2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B4BCFFA-22F0-4740-8796-6E002BA34D2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFD31832-6714-467F-ABA5-6B268CAC9486}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFD31832-6714-467F-ABA5-6B268CAC9486}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFD31832-6714-467F-ABA5-6B268CAC9486}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFD31832-6714-467F-ABA5-6B268CAC9486}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D00DCB1C-6056-497E-98F8-BD158F9B7DF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D00DCB1C-6056-497E-98F8-BD158F9B7DF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D00DCB1C-6056-497E-98F8-BD158F9B7DF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D00DCB1C-6056-497E-98F8-BD158F9B7DF5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

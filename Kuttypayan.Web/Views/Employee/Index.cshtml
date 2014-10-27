@@ -1,0 +1,25 @@
+﻿@model Kuttypayan.Web.Models.EmployeeModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        @using (Html.BeginForm("Index", "Employee", FormMethod.Post, new { @id = "form" }))
+        {
+            @Html.LabelFor(model => Model.Search, new { size = "100" })
+            @Html.TextBoxFor(model => model.Search, new { size = "100" })
+            <button id="submitbtn" value="Submit"> Search </button>
+            @Html.ValidationMessageFor(model => model.Search)
+        }
+        @Html.Partial("EmployeeResultPartial", Model)
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+﻿@model Kuttypayan.Web.Models.DictionaryModel
+
+@{if (@Model.SearchResult != null)
+{
+    foreach (var item in @Model.SearchResult)
+    {
+        <div> Word : @Html.Label(item.Word) </div>
+       
+        if (item.Meanings.Count() > 1)
+        {
+            for (int count = 1; count <= item.Meanings.Count(); count++)
+            {
+                <span>Meaning @count : </span> @Html.Label(@item.Meanings[count-1])
+    <br/>
+            }
+        }
+        else
+        {
+            <div> Meaning : @Html.Label(item.Meanings.FirstOrDefault()) </div>
+        }
+
+        <div>
+            part of Speech : @Html.Label(item.partOfSpeech)
+        </div>
+        if (item.Usages.FirstOrDefault() != string.Empty || item.Usages.FirstOrDefault() != null)
+        {
+            <div> Usages : @Html.Label(item.Usages.FirstOrDefault()) </div>
+        }
+        <br />
+
+    }
+}
+}

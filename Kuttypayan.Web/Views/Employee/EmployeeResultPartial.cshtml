@@ -1,0 +1,41 @@
+﻿@model Kuttypayan.Web.Models.EmployeeModel
+
+@{if (!string.IsNullOrEmpty(@Model.SearchResult))
+{
+    // Dictionary<string, List<Dictionary<string, string>>>
+    @*<br />
+    foreach (KeyValuePair<string, List<Dictionary<string, string>>> Item in @Model.SearchResult)
+    {
+       <span>Schema Name - </span> @Html.Label(Item.Key.ToUpper()) <br /><br />
+        foreach (Dictionary<string, string> Columns in Item.Value)
+        {
+            
+            foreach (KeyValuePair<string, string> ColumPair in Columns)
+            {
+               
+                if (!string.IsNullOrEmpty(ColumPair.Value))
+                {
+                    <span>Key - </span>@Html.Label(ColumPair.Key) <span> ; Value - </span>
+                    @Html.Label(ColumPair.Value)
+                    <br />
+                }
+                else
+                {
+                     <span>Key - </span>@Html.Label(ColumPair.Key) <span> ; Value - </span>
+                    @Html.Label(ColumPair.Value + " <alloted for Supervised Learning>")
+                    <br /> 
+                }
+            }
+            <br />
+        }
+        <br />
+       
+    }*@
+     <br /> <br />
+    <div>@Model.SearchResult</div>
+}
+else
+{ <br />
+        <div>sorry. coudn't understand you</div>
+}
+}

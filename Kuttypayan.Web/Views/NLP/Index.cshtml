@@ -1,0 +1,29 @@
+﻿@model Kuttypayan.Web.Models.DictionaryModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script type="text/javascript">
+
+    </script>
+</head>
+<body>
+    <div>
+
+        @using (Html.BeginForm("Index", "NLP", FormMethod.Post, new { @id = "form" }))
+        {
+            //@Html.LabelFor(model => Model.Search)
+            @Html.TextBoxFor(model => model.Search, new { size = "100" })
+            <button id="submitbtn" value="Submit"> Search </button>
+            @Html.ValidationMessageFor(model => model.Search)
+        }
+        @Html.Partial("NLPResultPartial", Model)
+    </div>
+</body>
+</html>

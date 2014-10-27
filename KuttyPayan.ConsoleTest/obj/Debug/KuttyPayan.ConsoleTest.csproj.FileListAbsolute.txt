@@ -1,0 +1,14 @@
+G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.ConsoleTest\bin\Debug\KuttyPayan.ConsoleTest.exe.config
+G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.ConsoleTest\bin\Debug\KuttyPayan.ConsoleTest.exe
+G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.ConsoleTest\bin\Debug\KuttyPayan.ConsoleTest.pdb
+G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.ConsoleTest\bin\Debug\KuttyPayan.DBReaderLibrary.dll
+G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.ConsoleTest\bin\Debug\KuttyPayan.MongodbLibrary.dll
+G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.ConsoleTest\bin\Debug\MongoDB.Bson.dll
+G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.ConsoleTest\bin\Debug\MongoDB.Driver.dll
+G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.ConsoleTest\bin\Debug\KuttyPayan.DBReaderLibrary.pdb
+G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.ConsoleTest\bin\Debug\KuttyPayan.MongodbLibrary.pdb
+G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.ConsoleTest\bin\Debug\MongoDB.Bson.xml
+G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.ConsoleTest\bin\Debug\MongoDB.Driver.xml
+G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.ConsoleTest\obj\Debug\KuttyPayan.ConsoleTest.csprojResolveAssemblyReference.cache
+G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.ConsoleTest\obj\Debug\KuttyPayan.ConsoleTest.exe
+G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.ConsoleTest\obj\Debug\KuttyPayan.ConsoleTest.pdb
