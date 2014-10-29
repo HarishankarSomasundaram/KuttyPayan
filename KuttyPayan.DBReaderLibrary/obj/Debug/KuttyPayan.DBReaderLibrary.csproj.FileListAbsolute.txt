@@ -6,6 +6,5 @@ G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.DBReaderLibrary\bin\Debug\Newto
 G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.DBReaderLibrary\bin\Debug\MongoDB.Bson.xml
 G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.DBReaderLibrary\bin\Debug\MongoDB.Driver.xml
 G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.DBReaderLibrary\bin\Debug\Newtonsoft.Json.xml
-G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.DBReaderLibrary\obj\Debug\KuttyPayan.DBReaderLibrary.csprojResolveAssemblyReference.cache
 G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.DBReaderLibrary\obj\Debug\KuttyPayan.DBReaderLibrary.dll
 G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.DBReaderLibrary\obj\Debug\KuttyPayan.DBReaderLibrary.pdb

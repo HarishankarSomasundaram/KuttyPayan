@@ -215,6 +215,10 @@
       <Project>{d00dcb1c-6056-497e-98f8-bd158f9b7df5}</Project>
       <Name>KuttyPayan.SchemaEvaluatorLibrary</Name>
     </ProjectReference>
+    <ProjectReference Include="..\KuttyPayan.SchemaImplementerLibrary\KuttyPayan.SchemaImplementerLibrary.csproj">
+      <Project>{d6588265-a0cd-44aa-9a92-434686a27955}</Project>
+      <Name>KuttyPayan.SchemaImplementerLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

@@ -115,6 +115,74 @@ namespace KuttyPayan.MongodbLibrary
             }
 
         }
+        public CRUDSchema KPFindCRUDSchemaMethod(EmployeeSchema InputSchema, SchemaEntityClass SchemaEntity)
+        {
+            MongoCollection<CRUDSchema> collection = database.GetCollection<CRUDSchema>("KPCRUDSchema");
+            var query = Query<CRUDSchema>.EQ(e => e.MappedSchema, InputSchema.Name);
+            List<CRUDSchema> CRUDSchemaList = collection.Find(query).ToList();
+            CRUDSchema objCRUDSchema = new CRUDSchema();
+
+            List<string[]> CRUDSChemaColumns = new List<string[]>();
+
+            List<string> EmployeeSchemaColumns = new List<string>();
+            List<WordSchemaReferenceValueClass> objEntityList = new List<WordSchemaReferenceValueClass>();
+            objEntityList = SchemaEntity.WordSchemaReferenceValueCollection;
+            StringBuilder QueryBuilder = new StringBuilder();
+            for (int i = 0; i < CRUDSchemaList.Count; i++)
+            {
+                for (int ColumnPos = 0; ColumnPos < CRUDSchemaList[i].column.Count;ColumnPos++ )
+                {
+                    var column = CRUDSchemaList[i].column.ElementAt(ColumnPos);
+                    if (column.Count() > 1)
+                    {
+                        if (column[1] == objEntityList[ColumnPos].SchemaValue)
+                        {
+                            QueryBuilder.Append(column[i]);
+                        }
+                    }
+                    else
+                    {
+                       if(column[1]==objEntityList[ColumnPos].SchemaReference)
+                       {
+                           QueryBuilder.Append(objEntityList[ColumnPos].SchemaReference);
+                       }
+                    }
+                }
+
+                    CRUDSChemaColumns.Add(CRUDSchemaList[i].column[0]);
+                EmployeeSchemaColumns.Add(objEntityList[i].SchemaReference);
+
+            }
+
+
+            //if(CRUDSchemaList.Count>1)
+            //{
+            objCRUDSchema = CRUDSchemaList.Where(a => a.column[0][1] == "select").FirstOrDefault();
+            return objCRUDSchema;
+            //}
+            //else
+            //{
+            //    return CRUDSchemaList.First();
+            //}
+
+        }
+
+        public EmployeeSchema KPFindEmployeeSchemaMethod(SchemaEntityClass EmployeeSchema)
+        {
+
+            MongoCollection<EmployeeSchema> collection = database.GetCollection<EmployeeSchema>("KPEmployeeSchema");
+            var query = Query<EmployeeSchema>.EQ(e => e.Name, EmployeeSchema.SchemaName);
+            EmployeeSchema objEmployeeSchema = collection.Find(query).FirstOrDefault();
+            return objEmployeeSchema;
+        }
+        public List<EmployeeSample> KPEmployeeSchemaImplementerMethod(string EmployeeSchema)
+        {
+
+            MongoCollection<EmployeeSample> Employeecollection = database.GetCollection<EmployeeSample>("Employee");
+            List<EmployeeSample> EmployeeList = Employeecollection.FindAll().ToList();
+            return EmployeeList;
+        }
+
 
         public bool KPEmployeeSchemaInsertMethod(List<SchemaEntityClass> EmployeeSchema)
         {

@@ -1,41 +1,32 @@
 ﻿@model Kuttypayan.Web.Models.EmployeeModel
 
-@{if (!string.IsNullOrEmpty(@Model.SearchResult))
+@{if (@Model.EmployeeList != null)
 {
-    // Dictionary<string, List<Dictionary<string, string>>>
-    @*<br />
-    foreach (KeyValuePair<string, List<Dictionary<string, string>>> Item in @Model.SearchResult)
-    {
-       <span>Schema Name - </span> @Html.Label(Item.Key.ToUpper()) <br /><br />
-        foreach (Dictionary<string, string> Columns in Item.Value)
+    <table>
+        <tr>
+            <td>EmpId</td>
+            <td>EmpName</td>
+            <td>EmpDesig</td>
+            <td>EmpAddress</td>
+        </tr>
+
+
+        @foreach (var v in @Model.EmployeeList)
         {
-            
-            foreach (KeyValuePair<string, string> ColumPair in Columns)
-            {
-               
-                if (!string.IsNullOrEmpty(ColumPair.Value))
-                {
-                    <span>Key - </span>@Html.Label(ColumPair.Key) <span> ; Value - </span>
-                    @Html.Label(ColumPair.Value)
-                    <br />
-                }
-                else
-                {
-                     <span>Key - </span>@Html.Label(ColumPair.Key) <span> ; Value - </span>
-                    @Html.Label(ColumPair.Value + " <alloted for Supervised Learning>")
-                    <br /> 
-                }
-            }
-            <br />
+        <tr>
+            <td>
+                @v.EmpId
+            </td>
+            <td>
+                @v.EmpName
+            </td>
+            <td> @v.EmpDesig </td>
+            <td>@v.EmpAddress </td>
+
+        </tr>
         }
-        <br />
-       
-    }*@
-     <br /> <br />
-    <div>@Model.SearchResult</div>
-}
-else
-{ <br />
-        <div>sorry. coudn't understand you</div>
+    </table>
 }
 }
+
+

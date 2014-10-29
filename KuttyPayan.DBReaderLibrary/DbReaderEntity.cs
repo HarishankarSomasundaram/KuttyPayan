@@ -18,6 +18,15 @@ namespace KuttyPayan.DBReaderLibrary
     //    public string[] Meaning { get; set; }
     //    public string[] Usage { get; set; }
     //}
+    public class CRUDSchema
+    {
+        public ObjectId Id { get; set; }
+        public string Name { get; set; }
+        public string Length { get; set; }
+        public string Type { get; set; }
+        public string MappedSchema { get; set; }
+        public List<string[]> column { get; set; }
+    }
     public class Dictionary
     {
         public ObjectId Id { get; set; }
@@ -54,14 +63,14 @@ namespace KuttyPayan.DBReaderLibrary
         public string Name { get; set; }
         public string Length { get; set; }
         public string Type { get; set; }
-        public  List<string[]> Data { get; set; }
+        public List<string[]> Data { get; set; }
         public List<string[]> ReferenceTable { get; set; }
     }
     public class EmployeeReference
     {
         public ObjectId Id { get; set; }
         public string Key { get; set; }
-        public string Reference { get; set; } 
+        public string Reference { get; set; }
     }
 
     public class SchemaEntityClass

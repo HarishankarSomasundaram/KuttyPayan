@@ -1,4 +1,6 @@
 ﻿using KuttyPayan.SchemaEvaluatorLibrary;
+using KuttyPayan.SchemaImplementerLibrary;
+using KuttyPayan.DBReaderLibrary;
 using KuttyPayan.MongodbLibrary;
 using System;
 using System.Collections.Generic;
@@ -15,21 +17,29 @@ namespace Kuttypayan.Web.Models
         public string Search { get; set; }
         //public Dictionary<string, List<Dictionary<string, string>>> SearchResult { get; set; }
         public string SearchResult { get; set; }
+        public List<EmployeeSample> EmployeeList { get; set; }
     }
     public class EmployeeSearchLogic
     {
         //public Dictionary<string, List<Dictionary<string, string>>> SearchModel(string SearchInput)
-        public string SearchModel(string SearchInput)
+        public List<EmployeeSample> SearchModel(string SearchInput)
         {
             KuttyPayanMongodbClass KPdbObj = new KuttyPayanMongodbClass();
 
             var SearchResult = KPdbObj.KPEmployeeSearchMethod(SearchInput);
 
             KPEmployeeSchemaEvaluatorClass SchemaEvaluator = new KPEmployeeSchemaEvaluatorClass();
-            string Result = SchemaEvaluator.EmployeeSchemaEvaluatorMethod(SearchResult, SearchInput);
+            SchemaEntityClass SchemaResult = SchemaEvaluator.EmployeeSchemaEvaluatorMethod(SearchResult, SearchInput);
 
-           // return SearchResult;
-            return Result;
+            KPEmployeeSchemaImplementerClass objEmployeeImplementor = new KPEmployeeSchemaImplementerClass();
+            List<EmployeeSample> EmployeeList = new List<EmployeeSample>();
+            if (SchemaResult != null)
+            {
+                EmployeeList = objEmployeeImplementor.EmployeeSchemaImplementerMethod(SchemaResult);
+            }
+
+            // return SearchResult;
+            return EmployeeList;
         }
         //public List<List<string>> SchemaAnalysis(List<List<string>> SearchResult)
         //{
