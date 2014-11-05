@@ -128,25 +128,33 @@ namespace KuttyPayan.MongodbLibrary
             List<WordSchemaReferenceValueClass> objEntityList = new List<WordSchemaReferenceValueClass>();
             objEntityList = SchemaEntity.WordSchemaReferenceValueCollection;
             StringBuilder QueryBuilder = new StringBuilder();
+
+            Dictionary<string, string> MatchCRUDSchema = new Dictionary<string, string>();
             for (int i = 0; i < CRUDSchemaList.Count; i++)
             {
                 for (int ColumnPos = 0; ColumnPos < CRUDSchemaList[i].column.Count;ColumnPos++ )
                 {
+                    string CRUDColumn =string.Empty;
+                    string EmployeeColumn = string.Empty;
                     var column = CRUDSchemaList[i].column.ElementAt(ColumnPos);
                     if (column.Count() > 1)
                     {
                         if (column[1] == objEntityList[ColumnPos].SchemaValue)
                         {
-                            QueryBuilder.Append(column[i]);
+                            CRUDColumn = objEntityList[ColumnPos].SchemaValue;
+                            //EmployeeColumn=
+                            //QueryBuilder.Append(column[i]);
                         }
                     }
                     else
                     {
-                       if(column[1]==objEntityList[ColumnPos].SchemaReference)
+                       if(column[0]==objEntityList[ColumnPos].SchemaReference)
                        {
+                           EmployeeColumn = objEntityList[ColumnPos].SchemaValue;
                            QueryBuilder.Append(objEntityList[ColumnPos].SchemaReference);
                        }
                     }
+                    MatchCRUDSchema.Add(EmployeeColumn, CRUDColumn);
                 }
 
                     CRUDSChemaColumns.Add(CRUDSchemaList[i].column[0]);
@@ -175,12 +183,12 @@ namespace KuttyPayan.MongodbLibrary
             EmployeeSchema objEmployeeSchema = collection.Find(query).FirstOrDefault();
             return objEmployeeSchema;
         }
-        public List<EmployeeSample> KPEmployeeSchemaImplementerMethod(string EmployeeSchema)
+        public List<SchemaMap> KPEmployeeSchemaImplementerMethod(string Schemamap)
         {
 
-            MongoCollection<EmployeeSample> Employeecollection = database.GetCollection<EmployeeSample>("Employee");
-            List<EmployeeSample> EmployeeList = Employeecollection.FindAll().ToList();
-            return EmployeeList;
+            MongoCollection<SchemaMap> Employeecollection = database.GetCollection<SchemaMap>("KPImplementorDictionary");
+            List<SchemaMap> SchemaList = Employeecollection.FindAll().ToList();
+            return SchemaList;
         }
 
 

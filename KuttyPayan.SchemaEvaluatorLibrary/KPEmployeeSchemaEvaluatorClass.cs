@@ -34,6 +34,11 @@ namespace KuttyPayan.SchemaEvaluatorLibrary
             }
             return SchemaResult;
         }
+        /// <summary>
+        /// Identifies maximum word-schema match and returns the schema details in a collection
+        /// </summary>
+        /// <param name="SchemaEntityList"></param>
+        /// <returns>SchemaEntityClass</returns>
         public SchemaEntityClass EmployeeSchemaIdentifier(List<SchemaEntityClass> SchemaEntityList)
         {
             var maxValue = SchemaEntityList.Max(x => x.WordSchemaMatchCount);

@@ -13,11 +13,18 @@ namespace KuttyPayan.SchemaImplementerLibrary
         KuttyPayanMongodbClass KPDBObj = new KuttyPayanMongodbClass();
         public List<EmployeeSample> EmployeeSchemaImplementerMethod(SchemaEntityClass SchemaName)
         {
-            var EmployeeSchema = KPDBObj.KPFindEmployeeSchemaMethod(SchemaName);
-            var EmployeeList = KPDBObj.KPEmployeeSchemaImplementerMethod("Employee");
-            CRUDSchema objCRUDSchema = FindCRUDSchema(EmployeeSchema, SchemaName);
+            List<WordSchemaReferenceValueClass> objWordSchemalist = SchemaName.WordSchemaReferenceValueCollection;
+            int WordCount = SchemaName.WordCount;
+            string SchemaMap = SchemaName.SchemaName;
+           string[] WordArray = SchemaName.WordSchemaReferenceValueCollection.Select(a => a.SchemaReference).ToArray();
 
-            return EmployeeList;
+            //var EmployeeSchema = KPDBObj.KPFindEmployeeSchemaMethod(SchemaName);
+            List<SchemaMap> SchemaList = KPDBObj.KPEmployeeSchemaImplementerMethod(SchemaMap);
+            //SchemaMap objSchemaMap = SchemaList.Where(a => a.MappedSchema == SchemaMap && a.columns == WordArray).All();
+            var EmployeeList = KPDBObj.KPEmployeeSchemaImplementerMethod("Employee");
+            //CRUDSchema objCRUDSchema = FindCRUDSchema(EmployeeSchema, SchemaName);
+
+            return null;
         }
         public CRUDSchema FindCRUDSchema(EmployeeSchema SchemaName, SchemaEntityClass SchemaEntity)
         {

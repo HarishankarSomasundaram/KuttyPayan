@@ -66,6 +66,16 @@ namespace KuttyPayan.DBReaderLibrary
         public List<string[]> Data { get; set; }
         public List<string[]> ReferenceTable { get; set; }
     }
+    public class SchemaMap
+    {
+        public ObjectId Id { get; set; }
+        public string Name { get; set; }
+        public string Length { get; set; }
+        public string group { get; set; }
+        public string MappedSchema { get; set; }
+        public string[] columns { get; set; }
+        public string Operation { get; set; }
+    }
     public class EmployeeReference
     {
         public ObjectId Id { get; set; }
