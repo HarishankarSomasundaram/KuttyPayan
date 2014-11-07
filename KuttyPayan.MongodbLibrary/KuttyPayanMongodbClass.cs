@@ -183,11 +183,11 @@ namespace KuttyPayan.MongodbLibrary
             EmployeeSchema objEmployeeSchema = collection.Find(query).FirstOrDefault();
             return objEmployeeSchema;
         }
-        public List<SchemaMap> KPEmployeeSchemaImplementerMethod(string Schemamap)
+        public List<SchemaMap> KPEmployeeSchemaImplementerMethod()
         {
 
             MongoCollection<SchemaMap> Employeecollection = database.GetCollection<SchemaMap>("KPImplementorDictionary");
-            List<SchemaMap> SchemaList = Employeecollection.FindAll().ToList();
+           var SchemaList = Employeecollection.FindAll().ToList();
             return SchemaList;
         }
 

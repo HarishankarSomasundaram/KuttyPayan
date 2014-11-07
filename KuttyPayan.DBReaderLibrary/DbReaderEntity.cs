@@ -73,8 +73,8 @@ namespace KuttyPayan.DBReaderLibrary
         public string Length { get; set; }
         public string group { get; set; }
         public string MappedSchema { get; set; }
-        public string[] columns { get; set; }
-        public string Operation { get; set; }
+        public string[] column { get; set; }
+        public string[] operation { get; set; }
     }
     public class EmployeeReference
     {

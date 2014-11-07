@@ -35,7 +35,8 @@ namespace Kuttypayan.Web.Models
             List<EmployeeSample> EmployeeList = new List<EmployeeSample>();
             if (SchemaResult != null)
             {
-                EmployeeList = objEmployeeImplementor.EmployeeSchemaImplementerMethod(SchemaResult);
+                string operation = objEmployeeImplementor.EmployeeSchemaImplementerMethod(SchemaResult);
+                //EmployeeList = objEmployeeImplementor.EmployeeSchemaImplementerMethod(SchemaResult);
             }
 
             // return SearchResult;

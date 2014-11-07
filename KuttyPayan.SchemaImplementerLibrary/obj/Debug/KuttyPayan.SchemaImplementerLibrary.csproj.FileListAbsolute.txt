@@ -11,3 +11,5 @@ G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.SchemaImplementerLibrary\bin\De
 G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.SchemaImplementerLibrary\obj\Debug\KuttyPayan.SchemaImplementerLibrary.csprojResolveAssemblyReference.cache
 G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.SchemaImplementerLibrary\obj\Debug\KuttyPayan.SchemaImplementerLibrary.dll
 G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.SchemaImplementerLibrary\obj\Debug\KuttyPayan.SchemaImplementerLibrary.pdb
+G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.SchemaImplementerLibrary\bin\Debug\KuttyPayan.SqlLibrary.dll
+G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.SchemaImplementerLibrary\bin\Debug\KuttyPayan.SqlLibrary.pdb

@@ -51,3 +51,5 @@ G:\VS2013 Projects\ASP MVC\KuttyPayan\Kuttypayan.Web\obj\Debug\Kuttypayan.Web.dl
 G:\VS2013 Projects\ASP MVC\KuttyPayan\Kuttypayan.Web\obj\Debug\Kuttypayan.Web.pdb
 G:\VS2013 Projects\ASP MVC\KuttyPayan\Kuttypayan.Web\bin\KuttyPayan.SchemaImplementerLibrary.dll
 G:\VS2013 Projects\ASP MVC\KuttyPayan\Kuttypayan.Web\bin\KuttyPayan.SchemaImplementerLibrary.pdb
+G:\VS2013 Projects\ASP MVC\KuttyPayan\Kuttypayan.Web\bin\KuttyPayan.SqlLibrary.dll
+G:\VS2013 Projects\ASP MVC\KuttyPayan\Kuttypayan.Web\bin\KuttyPayan.SqlLibrary.pdb

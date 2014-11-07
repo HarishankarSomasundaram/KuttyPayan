@@ -51,6 +51,10 @@
       <Project>{3fe7c6d2-5a73-442b-8596-10a9463852ca}</Project>
       <Name>KuttyPayan.MongodbLibrary</Name>
     </ProjectReference>
+    <ProjectReference Include="..\KuttyPayan.SqlLibrary\KuttyPayan.SqlLibrary.csproj">
+      <Project>{b9535fca-a65c-4c01-8db7-a73e7baf02d4}</Project>
+      <Name>KuttyPayan.SqlLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

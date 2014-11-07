@@ -1,0 +1,11 @@
+G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.SqlLibrary\bin\Debug\KuttyPayan.SqlLibrary.dll
+G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.SqlLibrary\bin\Debug\KuttyPayan.SqlLibrary.pdb
+G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.SqlLibrary\bin\Debug\KuttyPayan.DBReaderLibrary.dll
+G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.SqlLibrary\bin\Debug\MongoDB.Bson.dll
+G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.SqlLibrary\bin\Debug\MongoDB.Driver.dll
+G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.SqlLibrary\bin\Debug\KuttyPayan.DBReaderLibrary.pdb
+G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.SqlLibrary\bin\Debug\MongoDB.Bson.xml
+G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.SqlLibrary\bin\Debug\MongoDB.Driver.xml
+G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.SqlLibrary\obj\Debug\KuttyPayan.SqlLibrary.csprojResolveAssemblyReference.cache
+G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.SqlLibrary\obj\Debug\KuttyPayan.SqlLibrary.dll
+G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.SqlLibrary\obj\Debug\KuttyPayan.SqlLibrary.pdb
