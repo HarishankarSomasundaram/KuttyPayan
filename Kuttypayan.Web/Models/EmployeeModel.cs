@@ -22,12 +22,12 @@ namespace Kuttypayan.Web.Models
     public class EmployeeSearchLogic
     {
         //public Dictionary<string, List<Dictionary<string, string>>> SearchModel(string SearchInput)
-        public List<EmployeeSample> SearchModel(string SearchInput)
+        public string SearchModel(string SearchInput)
         {
+            string Result = string.Empty;
+
             KuttyPayanMongodbClass KPdbObj = new KuttyPayanMongodbClass();
-
             var SearchResult = KPdbObj.KPEmployeeSearchMethod(SearchInput);
-
             KPEmployeeSchemaEvaluatorClass SchemaEvaluator = new KPEmployeeSchemaEvaluatorClass();
             SchemaEntityClass SchemaResult = SchemaEvaluator.EmployeeSchemaEvaluatorMethod(SearchResult, SearchInput);
 
@@ -35,12 +35,17 @@ namespace Kuttypayan.Web.Models
             List<EmployeeSample> EmployeeList = new List<EmployeeSample>();
             if (SchemaResult != null)
             {
-                string operation = objEmployeeImplementor.EmployeeSchemaImplementerMethod(SchemaResult);
+                Result = objEmployeeImplementor.EmployeeSchemaImplementerMethod(SchemaResult);
                 //EmployeeList = objEmployeeImplementor.EmployeeSchemaImplementerMethod(SchemaResult);
             }
+            else
+            {
+                Result = "Schema Not Found";
+            }
+            return Result;
 
             // return SearchResult;
-            return EmployeeList;
+            //return EmployeeList;
         }
         //public List<List<string>> SchemaAnalysis(List<List<string>> SearchResult)
         //{

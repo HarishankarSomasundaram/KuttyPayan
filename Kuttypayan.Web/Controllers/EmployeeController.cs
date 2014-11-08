@@ -23,16 +23,11 @@ namespace Kuttypayan.Web.Controllers
             {
                 EmployeeSearchLogic objSearchLogic = new EmployeeSearchLogic();
               //  Dictionary<stbring, List<Dictionary<string, string>>>
-                var EmployeeList = objSearchLogic.SearchModel(objEmpModel.Search);
+                string Result = objSearchLogic.SearchModel(objEmpModel.Search);
 
-                if (EmployeeList != null)
-                {
-                    objEmpModel.EmployeeList = EmployeeList;
-                }
-                else
-                {
-                    objEmpModel.SearchResult = null;
-                }
+                
+                    objEmpModel.SearchResult = Result;
+                
                 return View(objEmpModel);
             }
             return View(objEmpModel);

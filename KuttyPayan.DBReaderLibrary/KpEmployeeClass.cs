@@ -47,16 +47,25 @@ namespace KuttyPayan.DBReaderLibrary
             {
                 List<string[]> ColummReferenceTableArray = objEmployeeSchema.ReferenceTable;
                 string ReferenceTable = ColummReferenceTableArray[ColumnPosition][1];
-                MongoCollection<EmployeeReference> ReferenceTablecollection = database.GetCollection<EmployeeReference>(ReferenceTable);
-                var EmployeeQuery = Query<EmployeeReference>.EQ(e => e.Key, InputCoumnName );
-                EmployeeReference objEmployeeReference = ReferenceTablecollection.Find(EmployeeQuery).FirstOrDefault();
-                if (objEmployeeReference != null)
+                if (ReferenceTable != "KPPassThroughDictionary")
                 {
-                     
-                    ReferenceColumn = objEmployeeReference.Reference;
+
+
+                    MongoCollection<EmployeeReference> ReferenceTablecollection = database.GetCollection<EmployeeReference>(ReferenceTable);
+                    var EmployeeQuery = Query<EmployeeReference>.EQ(e => e.Key, InputCoumnName);
+                    EmployeeReference objEmployeeReference = ReferenceTablecollection.Find(EmployeeQuery).FirstOrDefault();
+                    if (objEmployeeReference != null)
+                    {
+
+                        ReferenceColumn = objEmployeeReference.Reference;
+                    }
+
+                    ColumnReferencePair.Add(objEmployeeSchema.Data[ColumnPosition][1], ReferenceColumn);
                 }
-             
-                ColumnReferencePair.Add (objEmployeeSchema.Data[ColumnPosition][1],ReferenceColumn);
+                else
+                {
+                    ColumnReferencePair.Add(objEmployeeSchema.Data[ColumnPosition][1], InputCoumnName);
+                }
             }
             return ColumnReferencePair;
         }

@@ -15,6 +15,7 @@ namespace KuttyPayan.SchemaImplementerLibrary
         KPSqlClass KPSql = new KPSqlClass();
         public string EmployeeSchemaImplementerMethod(SchemaEntityClass SchemaName)
         {
+            string Result = string.Empty;
             List<WordSchemaReferenceValueClass> objWordSchemalist = SchemaName.WordSchemaReferenceValueCollection;
             int WordCount = SchemaName.WordCount;
             string SchemaMap = SchemaName.SchemaName;
@@ -34,7 +35,7 @@ namespace KuttyPayan.SchemaImplementerLibrary
                         {
                             count++;
                         }
-                        else if(SchemaValueArray[j]==SchemaList[i].column[j])
+                        else if (SchemaValueArray[j] == SchemaList[i].column[j])
                         {
                             count++;
                         }
@@ -48,21 +49,22 @@ namespace KuttyPayan.SchemaImplementerLibrary
             }
             if (FoundSchemaIndex >= 0)
             {
-                if( SchemaList[FoundSchemaIndex].group== "sql")
+                if (SchemaList[FoundSchemaIndex].group == "sql")
                 {
-                    KPSql.SqlSchemaParsermethod(SchemaList[FoundSchemaIndex], SchemaReferenceArray, SchemaValueArray);
+                    Result = KPSql.SqlSchemaParsermethod(SchemaList[FoundSchemaIndex], SchemaReferenceArray, SchemaValueArray, SchemaMap);
                 }
                 string[] operation = SchemaList[FoundSchemaIndex].operation;
-                return null;
+                return Result;
             }
             else
             {
-                return null;
+                Result = "schema doesnt match for the current query";
+                return Result;
             }
             //SchemaMap objSchemaMap = SchemaList.Where(a => a.MappedSchema == SchemaMap && a.columns == WordArray).All();
             //var EmployeeList = KPDBObj.KPEmployeeSchemaImplementerMethod("Employee");
             //CRUDSchema objCRUDSchema = FindCRUDSchema(EmployeeSchema, SchemaName);
- 
+
         }
         public CRUDSchema FindCRUDSchema(EmployeeSchema SchemaName, SchemaEntityClass SchemaEntity)
         {

@@ -1,6 +1,21 @@
 ﻿@model Kuttypayan.Web.Models.EmployeeModel
 
-@{if (@Model.EmployeeList != null)
+<br />
+<br />
+<br />
+<br />
+<br />
+@{if (@Model.SearchResult != string.Empty)
+{
+      @Html.Raw(@Model.SearchResult)
+ 
+}
+}
+
+
+
+
+@*@{if (@Model.EmployeeList != null)
 {
     <table>
         <tr>
@@ -27,6 +42,7 @@
         }
     </table>
 }
-}
+}*@
+
 
 
