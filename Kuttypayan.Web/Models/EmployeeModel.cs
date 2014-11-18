@@ -2,12 +2,15 @@
 using KuttyPayan.SchemaImplementerLibrary;
 using KuttyPayan.DBReaderLibrary;
 using KuttyPayan.MongodbLibrary;
+using KuttyPayan.NLP;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using System.Text;
+
 
 namespace Kuttypayan.Web.Models
 {
@@ -22,6 +25,23 @@ namespace Kuttypayan.Web.Models
     public class EmployeeSearchLogic
     {
         //public Dictionary<string, List<Dictionary<string, string>>> SearchModel(string SearchInput)
+
+        public string ChunkModel(string SearchInput)
+        {
+            StringBuilder output = new StringBuilder();
+            KuttyPayanPosTaggerClass objNLP = new KuttyPayanPosTaggerClass();
+            string[] sentences = objNLP.SplitSentences(SearchInput);
+
+            foreach (string sentence in sentences)
+            {
+                string[] tokens = objNLP.TokenizeSentence(sentence);
+                string[] tags = objNLP.PosTagTokens(tokens);
+
+                output.Append(objNLP.ChunkSentence(tokens, tags)).Append("\r\n");
+            }
+
+            return output.ToString();
+        }
         public string SearchModel(string SearchInput)
         {
             string Result = string.Empty;

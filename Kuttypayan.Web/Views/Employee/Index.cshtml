@@ -8,11 +8,12 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    
     <title>Index</title>
 </head>
 <body>
     <div> 
-        @using (Html.BeginForm("Index", "Employee", FormMethod.Post, new { @id = "form" }))
+        @using (Html.BeginForm("Index", "Employee", FormMethod.Post, new { @id ="search-form"}))
         {
             @Html.LabelFor(model => Model.Search, new { size = "100" })
             @Html.TextBoxFor(model => model.Search, new { size = "100" })

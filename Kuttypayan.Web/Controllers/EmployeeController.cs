@@ -21,13 +21,10 @@ namespace Kuttypayan.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                EmployeeSearchLogic objSearchLogic = new EmployeeSearchLogic();
-              //  Dictionary<stbring, List<Dictionary<string, string>>>
-                string Result = objSearchLogic.SearchModel(objEmpModel.Search);
-
-                
-                    objEmpModel.SearchResult = Result;
-                
+                EmployeeSearchLogic objSearchLogic = new EmployeeSearchLogic(); 
+                //string Result = objSearchLogic.SearchModel(objEmpModel.Search); 
+                string Result = objSearchLogic.ChunkModel(objEmpModel.Search);
+                objEmpModel.SearchResult = Result; 
                 return View(objEmpModel);
             }
             return View(objEmpModel);

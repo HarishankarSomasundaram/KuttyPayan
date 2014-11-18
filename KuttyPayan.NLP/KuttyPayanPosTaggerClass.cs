@@ -40,7 +40,7 @@ namespace KuttyPayan.NLP
 
             return TokenTags;
         }
-        private string[] SplitSentences(string paragraph)
+        public string[] SplitSentences(string paragraph)
         {
             if (mSentenceDetector == null)
             {
@@ -49,7 +49,7 @@ namespace KuttyPayan.NLP
 
             return mSentenceDetector.SentenceDetect(paragraph);
         }
-        private string[] TokenizeSentence(string sentence)
+        public string[] TokenizeSentence(string sentence)
         {
             if (mTokenizer == null)
             {
@@ -58,7 +58,7 @@ namespace KuttyPayan.NLP
 
             return mTokenizer.Tokenize(sentence);
         }
-        private string[] PosTagTokens(string[] tokens)
+        public string[] PosTagTokens(string[] tokens)
         {
             if (mPosTagger == null)
             {
@@ -66,6 +66,15 @@ namespace KuttyPayan.NLP
             }
 
             return mPosTagger.Tag(tokens);
+        }
+        public string ChunkSentence(string[] tokens, string[] tags)
+        {
+            if (mChunker == null)
+            {
+                mChunker = new OpenNLP.Tools.Chunker.EnglishTreebankChunker(mModelPath + "EnglishChunk.nbin");
+            }
+
+            return mChunker.GetChunks(tokens, tags);
         }
     }
 }
