@@ -56,6 +56,10 @@
       <Project>{2b4bcffa-22f0-4740-8796-6e002ba34d2c}</Project>
       <Name>KuttyPayan.DBReaderLibrary</Name>
     </ProjectReference>
+    <ProjectReference Include="..\KuttyPayan.Entities\KuttyPayan.Entities.csproj">
+      <Project>{051a7f91-205b-4e5d-8bc4-ff07d255fc36}</Project>
+      <Name>KuttyPayan.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

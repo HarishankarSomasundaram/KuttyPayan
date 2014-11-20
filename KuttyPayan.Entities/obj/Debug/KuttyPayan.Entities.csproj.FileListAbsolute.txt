@@ -1,0 +1,5 @@
+G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.Entities\bin\Debug\KuttyPayan.Entities.dll
+G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.Entities\bin\Debug\KuttyPayan.Entities.pdb
+G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.Entities\obj\Debug\KuttyPayan.Entities.csprojResolveAssemblyReference.cache
+G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.Entities\obj\Debug\KuttyPayan.Entities.dll
+G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.Entities\obj\Debug\KuttyPayan.Entities.pdb

@@ -11,3 +11,5 @@ G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.SchemaEvaluatorLibrary\bin\Debu
 G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.SchemaEvaluatorLibrary\obj\Debug\KuttyPayan.SchemaEvaluatorLibrary.csprojResolveAssemblyReference.cache
 G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.SchemaEvaluatorLibrary\obj\Debug\KuttyPayan.SchemaEvaluatorLibrary.dll
 G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.SchemaEvaluatorLibrary\obj\Debug\KuttyPayan.SchemaEvaluatorLibrary.pdb
+G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.SchemaEvaluatorLibrary\bin\Debug\KuttyPayan.Entities.dll
+G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.SchemaEvaluatorLibrary\bin\Debug\KuttyPayan.Entities.pdb

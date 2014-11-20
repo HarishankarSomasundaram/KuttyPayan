@@ -1,4 +1,5 @@
-﻿using KuttyPayan.SchemaEvaluatorLibrary;
+﻿using KuttyPayan.InputParserLibrary;
+using KuttyPayan.SchemaEvaluatorLibrary;
 using KuttyPayan.SchemaImplementerLibrary;
 using KuttyPayan.DBReaderLibrary;
 using KuttyPayan.MongodbLibrary;
@@ -26,21 +27,10 @@ namespace Kuttypayan.Web.Models
     {
         //public Dictionary<string, List<Dictionary<string, string>>> SearchModel(string SearchInput)
 
-        public string ChunkModel(string SearchInput)
+        public string InputParser(string SearchInput)
         {
-            StringBuilder output = new StringBuilder();
-            KuttyPayanPosTaggerClass objNLP = new KuttyPayanPosTaggerClass();
-            string[] sentences = objNLP.SplitSentences(SearchInput);
-
-            foreach (string sentence in sentences)
-            {
-                string[] tokens = objNLP.TokenizeSentence(sentence);
-                string[] tags = objNLP.PosTagTokens(tokens);
-
-                output.Append(objNLP.ChunkSentence(tokens, tags)).Append("\r\n");
-            }
-
-            return output.ToString();
+            KPInputParserClass KPParser = new KPInputParserClass();
+            return KPParser.KPInputParserMethod(SearchInput);
         }
         public string SearchModel(string SearchInput)
         {

@@ -13,3 +13,5 @@ G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.SchemaImplementerLibrary\obj\De
 G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.SchemaImplementerLibrary\obj\Debug\KuttyPayan.SchemaImplementerLibrary.pdb
 G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.SchemaImplementerLibrary\bin\Debug\KuttyPayan.SqlLibrary.dll
 G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.SchemaImplementerLibrary\bin\Debug\KuttyPayan.SqlLibrary.pdb
+G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.SchemaImplementerLibrary\bin\Debug\KuttyPayan.Entities.dll
+G:\VS2013 Projects\ASP MVC\KuttyPayan\KuttyPayan.SchemaImplementerLibrary\bin\Debug\KuttyPayan.Entities.pdb

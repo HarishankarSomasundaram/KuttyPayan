@@ -204,6 +204,10 @@
       <Project>{2b4bcffa-22f0-4740-8796-6e002ba34d2c}</Project>
       <Name>KuttyPayan.DBReaderLibrary</Name>
     </ProjectReference>
+    <ProjectReference Include="..\KuttyPayan.InputParserLibrary\KuttyPayan.InputParserLibrary.csproj">
+      <Project>{c6a034c4-765d-48e4-9904-d96c837a8118}</Project>
+      <Name>KuttyPayan.InputParserLibrary</Name>
+    </ProjectReference>
     <ProjectReference Include="..\KuttyPayan.MongodbLibrary\KuttyPayan.MongodbLibrary.csproj">
       <Project>{3fe7c6d2-5a73-442b-8596-10a9463852ca}</Project>
       <Name>KuttyPayan.MongodbLibrary</Name>

@@ -8,6 +8,8 @@ using MongoDB.Driver;
 using MongoDB.Driver.Linq;
 using MongoDB.Driver.Builders;
 using KuttyPayan.DBReaderLibrary;
+using KuttyPayan.Entities;
+
 namespace KuttyPayan.MongodbLibrary
 {
     public class KuttyPayanMongodbClass
@@ -53,6 +55,24 @@ namespace KuttyPayan.MongodbLibrary
                 {
                     Employeecollection.Insert(Employee);
                 }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+
+        }
+
+        public bool KuttyPayanInputParserInsert(InputParserEntities WordsEntitiesList)
+        {
+            try
+            {
+                MongoCollection<InputParserEntities> WordsEntitycollection = database.GetCollection<InputParserEntities>("KPInputParserDictionary");
+
+
+                WordsEntitycollection.Insert(WordsEntitiesList);
+
                 return true;
             }
             catch (Exception ex)
@@ -132,9 +152,9 @@ namespace KuttyPayan.MongodbLibrary
             Dictionary<string, string> MatchCRUDSchema = new Dictionary<string, string>();
             for (int i = 0; i < CRUDSchemaList.Count; i++)
             {
-                for (int ColumnPos = 0; ColumnPos < CRUDSchemaList[i].column.Count;ColumnPos++ )
+                for (int ColumnPos = 0; ColumnPos < CRUDSchemaList[i].column.Count; ColumnPos++)
                 {
-                    string CRUDColumn =string.Empty;
+                    string CRUDColumn = string.Empty;
                     string EmployeeColumn = string.Empty;
                     var column = CRUDSchemaList[i].column.ElementAt(ColumnPos);
                     if (column.Count() > 1)
@@ -148,16 +168,16 @@ namespace KuttyPayan.MongodbLibrary
                     }
                     else
                     {
-                       if(column[0]==objEntityList[ColumnPos].SchemaReference)
-                       {
-                           EmployeeColumn = objEntityList[ColumnPos].SchemaValue;
-                           QueryBuilder.Append(objEntityList[ColumnPos].SchemaReference);
-                       }
+                        if (column[0] == objEntityList[ColumnPos].SchemaReference)
+                        {
+                            EmployeeColumn = objEntityList[ColumnPos].SchemaValue;
+                            QueryBuilder.Append(objEntityList[ColumnPos].SchemaReference);
+                        }
                     }
                     MatchCRUDSchema.Add(EmployeeColumn, CRUDColumn);
                 }
 
-                    CRUDSChemaColumns.Add(CRUDSchemaList[i].column[0]);
+                CRUDSChemaColumns.Add(CRUDSchemaList[i].column[0]);
                 EmployeeSchemaColumns.Add(objEntityList[i].SchemaReference);
 
             }
@@ -187,7 +207,7 @@ namespace KuttyPayan.MongodbLibrary
         {
 
             MongoCollection<SchemaMap> Employeecollection = database.GetCollection<SchemaMap>("KPImplementorDictionary");
-           var SchemaList = Employeecollection.FindAll().ToList();
+            var SchemaList = Employeecollection.FindAll().ToList();
             return SchemaList;
         }
 

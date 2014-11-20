@@ -23,7 +23,7 @@ namespace Kuttypayan.Web.Controllers
             {
                 EmployeeSearchLogic objSearchLogic = new EmployeeSearchLogic(); 
                 //string Result = objSearchLogic.SearchModel(objEmpModel.Search); 
-                string Result = objSearchLogic.ChunkModel(objEmpModel.Search);
+                string Result = objSearchLogic.InputParser(objEmpModel.Search);
                 objEmpModel.SearchResult = Result; 
                 return View(objEmpModel);
             }
