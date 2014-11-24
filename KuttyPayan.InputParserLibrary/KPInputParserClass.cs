@@ -27,10 +27,46 @@ namespace KuttyPayan.InputParserLibrary
             }
             InputParserEntities WordsEntitiesList = KPInputDelimiter(output.ToString());
 
+            WordsEntitiesList = KPInputNoiceFilter(WordsEntitiesList);
             KuttyPayan.MongodbLibrary.KuttyPayanMongodbClass objKPDB = new KuttyPayanMongodbClass();
             bool isInserted = objKPDB.KuttyPayanInputParserInsert(WordsEntitiesList);
-
+            //output.Append(WordsEntitiesList.WordGroup.SelectMany(x => x.Words).ToString());
             return output.ToString();
+        }
+
+        private InputParserEntities KPInputNoiceFilter(InputParserEntities WordsEntitiesList)
+        {
+            InputParserEntities Entries = (InputParserEntities) WordsEntitiesList.
+            obj myobj2 = (obj)myobj.MemberwiseClone();
+            List<WordsEntities> WordsEntities = new  WordsEntitiesList.WordGroup;
+            WordsEntities = WordsEntitiesList.WordGroup;
+            List<WordTagPair> Words = new List<WordTagPair>();
+
+            for (int i = 0; i < WordsEntitiesList.WordGroup.Count; i++)
+            {
+                for (int j = 0; j < WordsEntitiesList.WordGroup[i].Words.Count; j++)
+                {
+
+                    if (WordsEntitiesList.WordGroup[i].Words[j].tag == "PRP")
+                    {
+                        WordsEntities.Remove(WordsEntities[i]);
+                    }
+                    if (WordsEntitiesList.WordGroup[i].Words[j].Word.ToLower() == "please")
+                    {
+                        WordTagPair wtp = WordsEntitiesList.WordGroup[i].Words[j];
+                        WordsEntities[i].Words.Remove(wtp);
+                    }
+
+                    if (WordsEntitiesList.WordGroup[i].Words.Count == 0)
+                    {
+                        WordsEntities we = WordsEntitiesList.WordGroup[i];
+                        WordsEntitiesList.WordGroup.Remove(we);
+
+                    }
+                }
+            }
+            Entries.WordGroup = WordsEntities;
+            return Entries;
         }
         private InputParserEntities KPInputDelimiter(string ParsedInput)
         {
